@@ -11,10 +11,21 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::auth();
+Route::group(['middleware' => 'auth'], function () {
+	Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
+	Route::get('profile', ['as' => 'profile', 'uses' => 'UserController@profile']);
+	Route::get('questions', 'QuestionsController@listAll');
 
-Route::get('/home', 'HomeController@index');
+	Route::post('profile', 'UserController@updateAvatar');
+
+	Route::group(['prefix' => 'quiz'], function () {
+		Route::get('', ['as' => 'quiz', 'uses' => 'QuizController@getView']);
+		Route::get('playing', ['as' => 'playing', 'uses' => 'QuizController@playQuiz']);
+		Route::get('result/{id?}', ['as' => 'result', 'uses' => 'QuizController@showPartnerAnswer']);
+
+		Route::post('', 'QuizController@invite');
+		Route::post('decide', 'QuizController@respondInvitation');
+		Route::post('submit', 'QuizController@recieveAnswer');
+	});
+});

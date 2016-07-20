@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -24,6 +25,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        if(Auth::user()->state=='playing') {
+            return redirect()->route('playing');
+        } else if (Auth::user()->state=='waiting') {
+            return redirect()->route('result');
+        } else {
+            return view('home');
+        }
     }
 }

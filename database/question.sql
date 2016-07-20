@@ -1,0 +1,18 @@
+INSERT INTO 'question'('content') VALUES ('Lần đầu gặp nhau, tớ mặc đồ màu gì?');
+INSERT INTO 'question'('content') VALUES ('Chúng mình đã làm gì cho ngày kỉ niệm 1 năm?');
+INSERT INTO 'question'('content') VALUES ('Ai là người bị “ăn hiếp” nhiều hơn trong mối quan hệ này?');
+INSERT INTO 'question'('content') VALUES ('Ở gia đình, tớ sợ ai nhất?');
+INSERT INTO 'question'('content') VALUES ('Điểm nào là đáng yêu nhất trên khuôn mặt của tớ?');
+INSERT INTO 'question'('content') VALUES ('Thói quen nào của cậu khiến cho tớ hay giận dỗi?');
+INSERT INTO 'question'('content') VALUES ('Lúc tớ bận, cậu thường nghĩ gì?');
+INSERT INTO 'question'('content') VALUES ('Ai là người nói lời yêu trước, và lúc đó thì chúng mình ở đâu?');
+INSERT INTO 'question'('content') VALUES ('Ấn tượng đầu tiên của tớ trong mắt cậu là gì?');
+INSERT INTO 'question'('content') VALUES ('3 điểm không ưa về đối phương');
+INSERT INTO 'question'('content') VALUES ('3 điểm thích nhất về đối phương');
+INSERT INTO 'question'('content') VALUES ('Lần cãi nhau to đầu tiên');
+INSERT INTO 'question'('content') VALUES ('Bộ phim yêu thích nhất của đối phương');
+INSERT INTO 'question'('content') VALUES ('Món ăn yêu thích nhất của đối phương');
+INSERT INTO 'question'('content') VALUES ('Mẫu người yêu lý tưởng của đối phương');
+INSERT INTO 'question'('content') VALUES ('Phong cách thời trang yêu thích nhất là gì');
+INSERT INTO 'question'('content') VALUES ('Những thứ họ ghét làm nhất');
+INSERT INTO 'question'('content') VALUES ('Nhìn thấy họ khóc bao giờ chưa? Như thế nào?');
