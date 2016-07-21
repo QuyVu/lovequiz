@@ -24,6 +24,12 @@
                     <h2><b>You have recieved an invitation. Do you want to join this game?</b></h2>
                     <button id='accept' class='btn btn-lg btn-outline btn-success'>Yes</button>
                     <button id='deny' class='btn btn-lg btn-outline btn-danger'>No</button>
+                @elseif (Auth::user()->state=='waiting' || Auth::user()->state=='paying')
+                    <h2><b>You have a unfinish quiz</b></h2>
+                    <button id='continue' class='btn btn-lg btn-outline btn-success'>Continue</button>
+                @elseif (Auth::user()->state=='finished')
+                    <h2><b>Do You want to play a new Quiz</b></h2>
+                    <button id='new' class='btn btn-lg btn-outline btn-primary'>Create New Quiz</button>
                 @endif
             </div>
         </div>

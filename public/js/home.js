@@ -28,3 +28,21 @@ function makeDecision(choice) {
 	});
 	window.location.reload();
 }
+
+$('button#continue').click(function() {
+	window.location.href = '/quiz/playing';
+});
+
+$('button#new').click(function() {
+	$.ajax({
+		type : "POST",
+		url : "create-new",
+		timeout : 100000,
+		success : function(result) {
+		},
+		error : function(result) {
+			alert(result);
+		}
+	});
+	window.location.href = '/';
+});

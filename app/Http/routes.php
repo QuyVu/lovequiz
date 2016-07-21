@@ -18,6 +18,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('questions', 'QuestionsController@listAll');
 
 	Route::post('profile', 'UserController@updateAvatar');
+	Route::post('create-new', 'HomeController@setStateToAvailable');
 
 	Route::group(['prefix' => 'quiz'], function () {
 		Route::get('', ['as' => 'quiz', 'uses' => 'QuizController@getView']);

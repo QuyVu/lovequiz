@@ -73,7 +73,9 @@ class QuizController extends Controller
         $data = ['questionsList' => $questionsList];
         if(Auth::user()->state=='available') {
             return redirect()->route('home');
-        } else{
+        } elseif (Auth::user()->state=='waiting'){
+            return redirect()->route('result', ['id' => $quiz->id]);
+        } else {
             return view('playing', $data);   
         }
     }
